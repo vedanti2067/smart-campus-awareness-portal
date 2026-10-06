@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🎓 Smart Campus Student Dashboard</h1>
+    <p>Your personalized campus information center</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="notices.html">📢 Notices</a>
+    <a href="events.html">🎉 Events</a>
+    <a href="lost.html">📦 Lost &amp; Found</a>
+    <a href="tour.html">🗺️ Campus Tour</a>
+    <a href="emergency.html">🚨 Emergency</a>
+    <a href="feedback.html">💬 Feedback</a>
+    <a href="survey.html">📊 Survey</a>
+    <a href="dashboard.html">🎓 Dashboard</a>
+</nav>
+
+<main class="dashboard">
+
+    <div class="card welcome-card">
+        <h2>Welcome, <span id="dashboardName">Student</span>! 👋</h2>
+        <p>Your campus information is available below.</p>
+    </div>
+
+    <div class="card profile-card">
+        <h2>Student Profile</h2>
+        <p><strong>Name:</strong> <span id="profileName">Student</span></p>
+        <p><strong>Student ID:</strong> <span id="profileId">SC2026-001</span></p>
+        <p><strong>Branch:</strong> Electronics &amp; Telecommunication</p>
+        <p><strong>Year:</strong> Second Year</p>
+        <p><strong>Email:</strong> student@smartcampus.edu</p>
+    </div>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>📢 Notices</h3>
+            <p>View the latest campus announcements.</p>
+            <a class="btn" href="notices.html">View Notices</a>
+        </div>
+
+        <div class="card">
+            <h3>🎉 Events</h3>
+            <p>Explore upcoming campus events.</p>
+            <a class="btn" href="events.html">View Events</a>
+        </div>
+
+        <div class="card">
+            <h3>📦 Lost &amp; Found</h3>
+            <p>Report or check lost items.</p>
+            <a class="btn" href="lost.html">Open Lost &amp; Found</a>
+        </div>
+
+        <div class="card">
+            <h3>🏫 Campus Tour</h3>
+            <p>Explore important places around the campus.</p>
+            <a class="btn" href="tour.html">Explore Campus</a>
+        </div>
+
+        <div class="card">
+            <h3>🚨 Emergency</h3>
+            <p>Quick access to emergency contacts.</p>
+            <a class="btn" href="emergency.html">View Contacts</a>
+        </div>
+
+        <div class="card">
+            <h3>💬 Feedback &amp; Complaints</h3>
+            <p>Submit feedback, complaints or suggestions to the college.</p>
+            <a class="btn" href="feedback.html">Submit Feedback</a>
+        </div>
+
+        <div class="card">
+            <h3>📊 Campus Survey</h3>
+            <p>Participate in our student survey and help improve campus services.</p>
+            <a class="btn" href="https://forms.gle/JaDX7Bay3ao3GMBS6" target="_blank">
+                Take Survey
+            </a>
+        </div>
+
+    </div>
+
+    <button onclick="logout()">Logout</button>
+
+</main>
+
+<footer>
+    <p>© 2026 Smart Campus Awareness Portal</p>
+</footer>
+
+<script>
+const name = localStorage.getItem("studentName");
+const id = localStorage.getItem("studentId");
+
+if (!name) {
+    window.location.href = "index.html";
+}
+
+document.getElementById("dashboardName").textContent = name;
+document.getElementById("profileName").textContent = name;
+document.getElementById("profileId").textContent = id || "SC2026-001";
+
+function logout() {
+    localStorage.removeItem("studentName");
+    localStorage.removeItem("studentId");
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

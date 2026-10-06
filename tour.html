@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Tour</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🗺️ Campus Tour</h1>
+    <p>Explore important places around the campus</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="notices.html">📢 Notices</a>
+    <a href="events.html">🎉 Events</a>
+    <a href="lost.html">📦 Lost &amp; Found</a>
+    <a href="tour.html">🗺️ Campus Tour</a>
+    <a href="emergency.html">🚨 Emergency</a>
+    <a href="feedback.html">💬 Feedback</a>
+    <a href="survey.html">📊 Survey</a>
+    <a href="dashboard.html">🎓 Dashboard</a>
+</nav>
+
+<main>
+
+<section>
+    <h2>Explore Campus</h2>
+
+    <div class="grid">
+
+        <div class="card tour-card">
+            <img src="images/main-building.jpg"
+     alt="Main Building"
+     class="tour-image">
+    <div class="icon">🏫</div>
+    <h3>Main Building</h3>
+    <p>
+        The main academic and administrative building
+        of the college.
+    </p>
+    <button onclick="showTour('Main Building')">
+        View Details
+    </button>
+</div>
+
+<div class="card tour-card">
+    <img src="images/central-library.jpg"
+     alt="Central Library"
+     class="tour-image">
+    <div class="icon">📚</div>
+    <h3>Central Library</h3>
+    <p>
+        A dedicated space for books, reference materials
+        and student study activities.
+    </p>
+    <button onclick="showTour('Central Library')">
+        View Details
+    </button>
+</div>
+
+<div class="card tour-card">
+    <img src="images/canteen.jpg"
+         alt="College Canteen"
+         class="tour-image">
+
+    <div class="icon">🍴</div>
+
+    <h3>Canteen</h3>
+
+    <p>
+        A campus food facility where students can
+        enjoy meals, snacks and refreshments.
+    </p>
+
+    <button onclick="showTour('Canteen')">
+        View Details
+    </button>
+</div>
+<div class="card tour-card">
+    <img src="images/cultural-centre.jpg"
+         alt="Cultural Centre"
+         class="tour-image">
+
+    <div class="icon">🎭</div>
+
+    <h3>Cultural Centre</h3>
+
+    <p>
+        A dedicated space for cultural activities,
+        student programs and college events.
+    </p>
+
+    <button onclick="showTour('Cultural Centre')">
+        View Details
+    </button>
+</div>
+<div class="card tour-card">
+    <img src="images/workshop.jpg"
+         alt="Engineering Workshop"
+         class="tour-image">
+
+    <div class="icon">🔧</div>
+
+    <h3>Workshop</h3>
+
+    <p>
+        A practical learning facility where engineering
+        students perform workshop activities and experiments.
+    </p>
+
+    <button onclick="showTour('Workshop')">
+        View Details
+    </button>
+</div>
+<div class="card tour-card">
+    <img src="images/laboratories.webp"
+         alt="College Laboratories"
+         class="tour-image">
+
+    <div class="icon">🔬</div>
+
+    <h3>Laboratories</h3>
+
+    <p>
+        Well-equipped laboratories that support practical
+        learning, experiments and academic activities.
+    </p>
+
+    <button onclick="showTour('Laboratories')">
+        View Details
+    </button>
+</div>
+    </div>
+
+    <p id="tourMessage" class="message"></p>
+
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Smart Campus Awareness Portal</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

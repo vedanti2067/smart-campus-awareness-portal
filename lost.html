@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost & Found</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>📦 Lost & Found</h1>
+    <p>Report lost or found items on campus</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="notices.html">📢 Notices</a>
+    <a href="events.html">🎉 Events</a>
+    <a href="lost.html">📦 Lost &amp; Found</a>
+    <a href="tour.html">🗺️ Campus Tour</a>
+    <a href="emergency.html">🚨 Emergency</a>
+    <a href="feedback.html">💬 Feedback</a>
+    <a href="survey.html">📊 Survey</a>
+    <a href="dashboard.html">🎓 Dashboard</a>
+</nav>
+
+<main>
+
+<section>
+    <h2>Report a Lost or Found Item</h2>
+
+    <div class="card form-card">
+
+        <form id="lostFoundForm">
+
+            <label>Item Status</label>
+            <select id="itemStatus" required>
+                <option value="">Select</option>
+                <option>Lost Item</option>
+                <option>Found Item</option>
+            </select>
+
+            <label>Item Name</label>
+            <input
+                id="itemName"
+                type="text"
+                placeholder="Example: College ID Card"
+                required
+            >
+
+            <label>Location</label>
+            <input
+                id="itemLocation"
+                type="text"
+                placeholder="Where was it lost/found?"
+                required
+            >
+
+            <label>Description</label>
+            <textarea
+                id="itemDescription"
+                placeholder="Describe the item"
+                required
+            ></textarea>
+
+            <label>Contact Number</label>
+            <input
+                id="contactNumber"
+                type="tel"
+                placeholder="Enter contact number"
+                required
+            >
+
+            <button type="submit">Submit Report</button>
+
+        </form>
+
+        <p id="lostFoundMessage" class="message"></p>
+
+    </div>
+</section>
+
+<section>
+    <h2>Recently Reported Items</h2>
+
+    <div id="reportedItems" class="grid">
+        <!-- Submitted reports will appear here -->
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Smart Campus Awareness Portal</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

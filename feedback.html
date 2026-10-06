@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback & Complaints</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>💬 Student Feedback & Complaints</h1>
+    <p>Share your feedback, complaints and suggestions</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="notices.html">📢 Notices</a>
+    <a href="events.html">🎉 Events</a>
+    <a href="lost.html">📦 Lost &amp; Found</a>
+    <a href="tour.html">🗺️ Campus Tour</a>
+    <a href="emergency.html">🚨 Emergency</a>
+    <a href="feedback.html">💬 Feedback</a>
+    <a href="survey.html">📊 Survey</a>
+    <a href="dashboard.html">🎓 Dashboard</a>
+</nav>
+
+<main>
+
+<section>
+    <h2>Submit Your Feedback</h2>
+
+    <div class="card form-card">
+
+        <form id="feedbackForm">
+
+            <label>Student Name</label>
+            <input
+                type="text"
+                id="feedbackName"
+                placeholder="Enter your name"
+                required
+            >
+
+            <label>Type</label>
+            <select id="feedbackType" required>
+                <option value="">Select Type</option>
+                <option>Feedback</option>
+                <option>Complaint</option>
+                <option>Suggestion</option>
+            </select>
+
+            <label>Message</label>
+            <textarea
+                id="feedbackText"
+                placeholder="Write your feedback or complaint"
+                required
+            ></textarea>
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+        <p id="feedbackMessage" class="message"></p>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Smart Campus Awareness Portal</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
