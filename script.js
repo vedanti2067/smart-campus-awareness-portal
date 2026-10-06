@@ -169,3 +169,99 @@ if (surveyForm) {
         surveyForm.reset();
     });
 }
+function showCulturalRegistration() {
+    const form = document.getElementById("culturalRegistration");
+
+    if (form) {
+        form.style.display = "block";
+    }
+}
+
+const culturalForm = document.getElementById("culturalForm");
+
+if (culturalForm) {
+
+    const culturalMessage =
+        document.getElementById("culturalMessage");
+
+    culturalForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const name =
+            document.getElementById("culturalName").value.trim();
+
+        const department =
+            document.getElementById("culturalDepartment").value.trim();
+
+        const contact =
+            document.getElementById("culturalContact").value.trim();
+
+        const registrations =
+            JSON.parse(
+                localStorage.getItem("culturalRegistrations")
+            ) || [];
+
+        const newRegistration = {
+            name: name,
+            department: department,
+            contact: contact,
+            date: new Date().toLocaleString()
+        };
+
+        registrations.unshift(newRegistration);
+
+        localStorage.setItem(
+            "culturalRegistrations",
+            JSON.stringify(registrations)
+        );
+
+        culturalMessage.textContent =
+            "✅ Registration submitted successfully!";
+
+        culturalForm.reset();
+
+        displayCulturalRegistrations();
+    });
+}
+function displayCulturalRegistrations() {
+
+    const list =
+        document.getElementById("culturalRegistrations");
+
+    if (!list) {
+        return;
+    }
+
+    const registrations =
+        JSON.parse(
+            localStorage.getItem("culturalRegistrations")
+        ) || [];
+
+    list.innerHTML = "";
+
+    if (registrations.length === 0) {
+        list.innerHTML =
+            '<p class="small">No students registered yet.</p>';
+        return;
+    }
+
+    registrations.forEach(function(registration, index) {
+
+        const card = document.createElement("div");
+
+        card.className = "card";
+
+        card.innerHTML = `
+            <h4>👤 ${registration.name}</h4>
+            <p><strong>Department:</strong> ${registration.department}</p>
+            <p class="small">
+                Registered on: ${registration.date}
+            </p>
+        `;
+
+        list.appendChild(card);
+    });
+}
+
+displayCulturalRegistrations();

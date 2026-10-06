@@ -49,14 +49,58 @@
     </button>
 </div>
         <div class="card">
-            <h3>🎭 Cultural Fest</h3>
-            <p><strong>Date:</strong> Revealing soon</p>
-            <p>Enjoy music, dance, drama and various cultural activities.</p>
-            <button onclick="registerEvent('Cultural Fest')">
-                Register Now
-            </button>
-        </div>
+    <h3>🎭 Cultural Fest</h3>
 
+    <p><strong>📅 Date:</strong> Revealing soon</p>
+
+    <p>
+        Enjoy music, dance, drama and various cultural activities.
+    </p>
+
+    <button type="button" onclick="showCulturalRegistration()">
+        Register Now
+    </button>
+
+    <div id="culturalRegistration" style="display:none; margin-top:20px;">
+
+        <h3>🎭 Cultural Fest Registration</h3>
+
+        <form id="culturalForm">
+
+            <label>Student Name</label>
+            <input
+                type="text"
+                id="culturalName"
+                placeholder="Enter your name"
+                required
+            >
+
+            <label>Department</label>
+            <input
+                type="text"
+                id="culturalDepartment"
+                placeholder="Example: ENTC"
+                required
+            >
+
+            <label>Contact Number</label>
+            <input
+                type="tel"
+                id="culturalContact"
+                placeholder="Enter contact number"
+                required
+            >
+
+            <button type="submit">
+                Submit Registration
+            </button>
+
+        </form>
+
+        <p id="culturalMessage" class="message"></p>
+
+    </div>
+</div>
         <div class="card">
             <h3>🏆 Sports Day</h3>
             <p><strong>Date:</strong> 25 October 2026</p>
